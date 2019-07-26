@@ -55,8 +55,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\HomePage.cs" />
+    <Compile Include="Pages\JobApplicationForm.cs" />
     <Compile Include="Pages\SignUp.cs" />
     <Compile Include="Pages\UserPanel.cs" />
+    <Compile Include="Test_Cases\JobApplicationFormTests.cs" />
     <Compile Include="Test_Cases\RegisterUserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

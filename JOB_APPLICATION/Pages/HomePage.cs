@@ -20,7 +20,7 @@ namespace JOB_APPLICATION.Pages
         //-------------
         public void goToPage()
         {
-            driver.Navigate().GoToUrl("https://www.wufoo.com/gallery/templates/forms/job-application/");
+            driver.Navigate().GoToUrl("https://www.wufoo.com");
         }
 
         public SignUp goToSignUpPage()

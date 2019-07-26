@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.PageObjects;
 using JOB_APPLICATION.Pages;
 
 namespace JOB_APPLICATION
@@ -33,9 +32,21 @@ namespace JOB_APPLICATION
             HomePage home = new HomePage(driver);
             home.goToPage();
             SignUp signUp = home.goToSignUpPage();
+            //ACT
             signUp.createAnAccountAndGoToUserPanel();
         }
-
+        [Test]
+        public void JOB_APPLICATION_Given_TryingToSignUp_When_GivenInalidInformation_Then_InformationOfInvalidDataPopUp()
+        {
+            //ARRANGE
+            HomePage home = new HomePage(driver);
+            home.goToPage();
+            SignUp signUp = home.goToSignUpPage();
+            //ACT
+            signUp.giveInvalidInformation();
+            //ASSERT
+            Assert.IsTrue(driver.Url.Contains("register"));
+        }
         [TearDown]
         public void TearDown()
         {

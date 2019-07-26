@@ -35,6 +35,14 @@ namespace JOB_APPLICATION.Pages
             signUpButton.Click();
             return new UserPanel(driver);
         }
+        public SignUp giveInvalidInformation()
+        {
+            signUpEmail.SendKeys("bububobo.com");
+            signUpPassword.SendKeys("12345");
+            signUpUsername.SendKeys("HP");
+            signUpButton.Click();
+            return new SignUp(driver);
+        }
 
 
     }
